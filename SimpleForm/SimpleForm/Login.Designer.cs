@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Username = new System.Windows.Forms.TextBox();
-            this.p = new System.Windows.Forms.TextBox();
+            this.pwd = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -44,17 +44,21 @@
             this.Username.TabIndex = 2;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Username.Enter += new System.EventHandler(this.Username_Enter);
+            this.Username.Leave += new System.EventHandler(this.Username_Leave);
             // 
-            // p
+            // pwd
             // 
-            this.p.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.p.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.p.Location = new System.Drawing.Point(390, 370);
-            this.p.Name = "p";
-            this.p.Size = new System.Drawing.Size(213, 31);
-            this.p.TabIndex = 3;
-            this.p.Text = "Password";
-            this.p.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pwd.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwd.Location = new System.Drawing.Point(390, 370);
+            this.pwd.Name = "pwd";
+            this.pwd.Size = new System.Drawing.Size(213, 31);
+            this.pwd.TabIndex = 3;
+            this.pwd.Text = "Password";
+            this.pwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pwd.Enter += new System.EventHandler(this.Password_Enter);
+            this.pwd.Leave += new System.EventHandler(this.Password_Leave);
             // 
             // LoginBtn
             // 
@@ -85,7 +89,7 @@
             this.ClientSize = new System.Drawing.Size(969, 663);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginBtn);
-            this.Controls.Add(this.p);
+            this.Controls.Add(this.pwd);
             this.Controls.Add(this.Username);
             this.Name = "Login";
             this.Text = "Form1";
@@ -96,7 +100,7 @@
 
         #endregion
         private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.TextBox p;
+        private System.Windows.Forms.TextBox pwd;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Label label1;
     }

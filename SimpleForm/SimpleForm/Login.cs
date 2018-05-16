@@ -23,7 +23,39 @@ namespace SimpleForm
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             username = Username.Text;
-            password = password.
+            password = pwd.Text;
+        }
+
+        private void Username_Enter(object sender, EventArgs e)
+        {
+            if(Username.Text == "Username")
+            {
+                Username.Text = "";
+            }
+        }
+
+        private void Username_Leave(object sender, EventArgs e)
+        {
+            if(Username.Text == "")
+            {
+                Username.Text = "Username";
+            }
+        }
+        
+        private void Password_Enter(object sender, EventArgs e)
+        {
+            if(pwd.Text == "Password")
+            {
+                pwd.Text = "";
+            }
+        }
+
+        private void Password_Leave(object sender, EventArgs e)
+        {
+            if(pwd.Text == "")
+            {
+                pwd.Text = "Password";
+            }
         }
     }
 }
