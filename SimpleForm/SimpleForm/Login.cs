@@ -24,6 +24,8 @@ namespace SimpleForm
         {
             username = Username.Text;
             password = pwd.Text;
+
+            LoginController login = new LoginController(username, password);
         }
 
         private void Username_Enter(object sender, EventArgs e)
