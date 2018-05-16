@@ -8,7 +8,7 @@ namespace SimpleForm
 {
     class LoginController
     {
-        LoginController()
+        public LoginController(String username, String password)
         {
 
         }
