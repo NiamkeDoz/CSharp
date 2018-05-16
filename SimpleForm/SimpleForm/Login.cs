@@ -12,9 +12,18 @@ namespace SimpleForm
 {
     public partial class Login : Form
     {
+        string username;
+        string password;
+
         public Login()
         {
             InitializeComponent();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            username = Username.Text;
+            password = password.
         }
     }
 }
