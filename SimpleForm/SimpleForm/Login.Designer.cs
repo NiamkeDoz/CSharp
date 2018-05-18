@@ -32,6 +32,8 @@
             this.pwd = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.unameError = new System.Windows.Forms.Label();
+            this.passError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Username
@@ -81,12 +83,30 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Car Finder";
             // 
+            // unameError
+            // 
+            this.unameError.AutoSize = true;
+            this.unameError.Location = new System.Drawing.Point(315, 312);
+            this.unameError.Name = "unameError";
+            this.unameError.Size = new System.Drawing.Size(0, 13);
+            this.unameError.TabIndex = 6;
+            // 
+            // passError
+            // 
+            this.passError.AutoSize = true;
+            this.passError.Location = new System.Drawing.Point(315, 382);
+            this.passError.Name = "passError";
+            this.passError.Size = new System.Drawing.Size(0, 13);
+            this.passError.TabIndex = 7;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(969, 663);
+            this.Controls.Add(this.passError);
+            this.Controls.Add(this.unameError);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.pwd);
@@ -103,6 +123,8 @@
         private System.Windows.Forms.TextBox pwd;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label unameError;
+        private System.Windows.Forms.Label passError;
     }
 }
 
