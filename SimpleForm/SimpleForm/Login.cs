@@ -15,6 +15,9 @@ namespace SimpleForm
         string username;
         string password;
 
+        string UsernameError;
+        string PasswordError;
+
         public Login()
         {
             InitializeComponent();
@@ -58,6 +61,16 @@ namespace SimpleForm
             {
                 pwd.Text = "Password";
             }
+        }
+
+        public void SetUsernameError(string UserError)
+        {
+            unameError.Text = UserError;
+        }
+
+        public void SetPasswordError(string passwordError)
+        {
+            passError.Text = passwordError;
         }
     }
 }
